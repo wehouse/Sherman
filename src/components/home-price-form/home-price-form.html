@@ -1,0 +1,40 @@
+<!-- Generated template for the HomePriceFormComponent component -->
+<form [formGroup]="homePriceMLInput" (ngSubmit)="postRequest()">
+  <ion-item>
+    <ion-label>Zipcode</ion-label>
+    <ion-input type="number" formControlName="zipcode"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Bedrooms</ion-label>
+      <ion-input type="number" formControlName="bedrooms"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Bathrooms</ion-label>
+      <ion-input type="number" formControlName="bathrooms"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Floors</ion-label>
+      <ion-input type="number" formControlName="floors"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Sqft Above</ion-label>
+      <ion-input type="number" formControlName="sqft_above"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Sqft Basement</ion-label>
+      <ion-input type="number" formControlName="sqft_basement"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Year Built</ion-label>
+      <ion-input type="number" formControlName="year_built"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Sqft Living</ion-label>
+      <ion-input type="number" formControlName="sqft_living"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Sqft Lot</ion-label>
+      <ion-input type="number" formControlName="sqft_lot"></ion-input>
+  </ion-item>
+  <button ion-button type="submit" [disabled]="!homePriceMLInput.valid">Submit</button>
+</form>
