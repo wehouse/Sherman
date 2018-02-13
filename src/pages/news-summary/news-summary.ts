@@ -18,7 +18,7 @@ import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 })
 export class NewsSummaryPage {
   
-  private textSummary:Array<String>;
+  private textSummary:String;
   private textSummarizerInput : FormGroup;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder, private http:Http ) {
@@ -48,7 +48,7 @@ export class NewsSummaryPage {
     this.http.post("https://textanalysis-text-summarization.p.mashape.com/text-summarizer", postParams, options)
       .subscribe(data => {
         let text = JSON.parse(data['_body']);
-        this.textSummary = text.sentences;
+        this.textSummary = text.sentences.join(" ");
        }, error => {
         console.log(error);// Error getting the data
       });
