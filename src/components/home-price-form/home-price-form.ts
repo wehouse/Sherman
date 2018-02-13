@@ -15,6 +15,7 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 export class HomePriceFormComponent {
 
   private homePriceMLInput : FormGroup;
+  private homePrice;
 
   constructor( private formBuilder: FormBuilder, private http:Http ) {
     this.homePriceMLInput = this.formBuilder.group({
@@ -55,6 +56,7 @@ export class HomePriceFormComponent {
     this.http.post("https://wehouse-home-price-estimator.herokuapp.com/multiple-linear", postParams, options)
       .subscribe(data => {
         console.log(data['_body']);
+        this.homePrice = parseFloat(data['_body']).toFixed(2);
        }, error => {
         console.log(error);// Error getting the data
       });

@@ -9,13 +9,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {HomePricePage} from '../pages/home-price/home-price'
 import {HomePriceFormComponent} from '../components/home-price-form/home-price-form'
+import {NewsSummaryPage} from '../pages/news-summary/news-summary'
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     HomePricePage,
-    HomePriceFormComponent
+    HomePriceFormComponent,
+    NewsSummaryPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import {HomePriceFormComponent} from '../components/home-price-form/home-price-f
   entryComponents: [
     MyApp,
     HomePage,
-    HomePricePage
+    HomePricePage,
+    NewsSummaryPage
   ],
   providers: [
     StatusBar,
